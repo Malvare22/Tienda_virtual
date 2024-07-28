@@ -85,3 +85,39 @@
     bottom: 70px;
     left: 50px;
 }
+
+.categories{
+    display: flex;
+    font-weight: bold;
+    color: #2B3445;
+    padding-left: 2%;
+    border-bottom: black solid 2px;
+}
+
+.categories > div{
+    margin: 2%;
+    margin-bottom: 1%;
+    div{
+        display: flex;
+        justify-content: center;
+    }
+    div > svg{
+        margin-top: 10px;
+        visibility: hidden;
+        stroke-width: 1px;
+
+    }
+}
+
+.categories > div:hover{
+    font-weight: bolder;
+    color: #013E9B;
+    div > svg{
+        stroke: #FCD000;
+        visibility: visible;
+    }
+}
+
+.line{
+    height: 20px;
+}

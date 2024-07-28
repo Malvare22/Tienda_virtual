@@ -29,11 +29,36 @@ function Header() {
                     </div>
             </div>
     </div>
+    <div className={HeaderCSS.categories}>
+        <Option text={'Home'}></Option>
+        <Option text={'Celulares'}></Option>
+        <Option text={'Motocicletas'}></Option>
+        <Option text={'Tus préstamos'}></Option>
+        <Option text={'Tiendas'}></Option>
+        <Option text={'Tracking'}></Option>
+        <Option text={'Club Macropay'}></Option>
+    </div>
     
     </>
   );
     
 }
+
+const Option = ({text, url}) => {
+
+    return(<>
+        <div>
+            <div>
+               {text}
+            </div>
+            <div className={HeaderCSS.line}>
+                <svg viewBox="0 0 10 4" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3" y1="0" x2="7" y2="0" />
+                </svg>      
+            </div>
+        </div>
+    </>);
+};
 
 
 export default Header;
