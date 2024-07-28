@@ -1,0 +1,87 @@
+.container{
+    background-color: #004AC1;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-right: 190px;
+    padding-left: 5%;
+}
+
+.container_btns{
+    min-width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_btns > div{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.btn1{
+    background-color: #FFD300;
+    width: auto;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.btn2{
+    width: auto;
+    display: inline-block;
+    padding: 15px;
+   color: #FFD300;
+}
+
+.car{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 2500px;
+}
+
+.ad{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #FFD300;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    top: -105px;
+    right: -80px;
+}
+
+.ad h2, .ad h3{
+    font-weight: lighter;
+}
+
+.ad > div{
+    min-width: 200px;
+}
+
+.ad h2{
+    transform: rotate(50deg);
+    position: absolute;
+    bottom: 45px;
+    left: 8px;
+    font-size: 30px;
+
+}
+
+.ad h3{
+    transform: rotate(50deg);
+    position: absolute;
+    bottom: 70px;
+    left: 50px;
+}
