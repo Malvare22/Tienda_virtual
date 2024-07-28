@@ -1,10 +1,12 @@
 import './App.css'
+import Footer from './components/footer/Footer.jsx'
 
 function App() {
 
   return (
     <>
-      Hello
+        <Footer></Footer>
+
     </>
   )
 }
