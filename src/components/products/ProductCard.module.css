@@ -1,0 +1,53 @@
+.container{
+    width: 350px;
+}
+
+.row1, .row2{
+    display: flex;
+    
+}
+
+.row1_col1, .row1_col2{
+    width: 100%;
+}
+
+.row1{
+    margin-bottom: 4%;
+}
+
+.tittle{
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B3445;
+}
+
+.price{
+    color: #004AC1;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: end;
+
+}
+
+.old_price{
+    color: #7D879C;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
+    text-decoration: line-through;
+}
+
+.btn{
+    background-color: #FFD300;
+    color: #004AC1;
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+}
+
+.credit{
+    color: #7D879C;
+    font-size: 14px;
+    font-weight: bold;
+}
+

@@ -5,6 +5,9 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 import { useState } from 'react';
 import Star from '../../assets/svg/star';
+import Search from 'antd/es/transfer/search';
+import ProductCard from '../products/ProductCard';
+import { StarHandleScore } from '../star_score/StarScore';
 
 const items = [
     {
@@ -40,10 +43,13 @@ function Filters() {
     const [range, setRange] = useState([0, 0]);
 
   return(
-    <div className={FiltersCSS.center}>
-        <div>
+    <div>
+        <div className={FiltersCSS.row1}>
             <Sorter></Sorter>
-            <Card className={FiltersCSS.container}>
+            <SearchBar></SearchBar>
+        </div>
+        <div className={FiltersCSS.row2}>
+            <Card className={FiltersCSS.filters}>
                 <Option label={'Marcas'} value={brand} setValue={setBrand}></Option>
                 <Cost value={range} setValue={setRange}></Cost>
                 <Reviews score={score} setScore={setScore}></Reviews>
@@ -51,6 +57,7 @@ function Filters() {
                 <Option label={'Rango'} value={brand} setValue={setBrand}></Option>
                 <Option label={'Cámara'} value={brand} setValue={setBrand}></Option>
             </Card>
+            <ProductCard></ProductCard>
         </div>
     </div>
   );
@@ -99,11 +106,7 @@ function Reviews({score, setScore}){
                 Reviews
             </div>
             <div className={FiltersCSS.container_star}>
-                <Star className={score >= 1 ? FiltersCSS.star_fill : FiltersCSS.star_no_fill} onClick={() => setScore(1)}></Star>
-                <Star className={score >= 2 ? FiltersCSS.star_fill : FiltersCSS.star_no_fill} onClick={() => setScore(2)}></Star>
-                <Star className={score >= 3 ? FiltersCSS.star_fill : FiltersCSS.star_no_fill} onClick={() => setScore(3)}></Star>
-                <Star className={score >= 4 ? FiltersCSS.star_fill : FiltersCSS.star_no_fill} onClick={() => setScore(4)}></Star>
-                <Star className={score == 5 ? FiltersCSS.star_fill : FiltersCSS.star_no_fill} onClick={() => setScore(5)}></Star>
+                <StarHandleScore score={score} setScore={setScore}></StarHandleScore>
             </div>
         </>
     )
@@ -125,5 +128,21 @@ function Sorter({value, setValue}){
         </div>
     );
 }
+
+function SearchBar(){
+
+    const onSearch = (e) => console.log(e.target.value);
+
+    return(
+        <div className={FiltersCSS.search_bar}>
+            <Search placeholder="input search text" onChange={onSearch} style={{ width: 40 }} />
+            <Dropdown menu={{ items }} className={FiltersCSS.dropdown_categories}>
+                <a onClick={(e) => e.preventDefault()}>
+                    Selecciona <DownOutlined/>
+                </a>
+            </Dropdown>
+        </div>
+    );
+} 
 
 export default Filters;

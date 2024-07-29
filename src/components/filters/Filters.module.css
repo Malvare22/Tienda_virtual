@@ -1,23 +1,11 @@
-.container{
+.filters{
     border: black solid 1px;
     padding: 2%;
-    
-}
-
-.container_star img{
-    margin-right: 0.5%;
-}
-
-.star_fill{
-    fill: #FFD300;
-}
-
-.star_no_fill{
-    fill: none;
-    stroke: black;
+    width: 30%;
 }
 
 .sorter{
+    width: 30%;
     display: flex;
     div{
         width: 100%;
@@ -29,7 +17,36 @@
     }
 }
 
-.center{
+.row1{
     display: flex;
-    justify-content: center;
+    margin-right: 1%;
+    > div{
+        margin-right: 5%;
+        margin-bottom: 2%;
+    }
+}
+
+.search_bar{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+    
+}
+
+.dropdown_categories{
+    background-color: #EBEFF4;
+    width: 500px;
+    font-size: 14;
+    font-weight: normal;
+}
+
+.row2{
+    display: flex;
+    margin-right: 1%;
+}
+
+.row1_row1{
+    display: flex;
+    margin-right: 1%;
 }

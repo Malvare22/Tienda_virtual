@@ -1,0 +1,12 @@
+.container_star img{
+    margin-right: 0.5%;
+}
+
+.star_fill{
+    fill: #FFD300;
+}
+
+.star_no_fill{
+    fill: none;
+    stroke: black;
+}
