@@ -2,11 +2,14 @@ import { Button, Card } from 'antd';
 import ProductCardCSS from './ProductCard.module.css';
 import Meta from 'antd/es/card/Meta';
 import { StarScore } from '../star_score/StarScore';
+import HeartFill from '../../assets/svg/heart-fill';
+import Heart from '../../assets/svg/heart';
+import { useState } from 'react';
 function ProductCard() {
 
     return (
       <div className={ProductCardCSS.container}>
-            <Card hoverable cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
+            <Card hoverable cover={<ImgProduct></ImgProduct>}>
                 <div className={ProductCardCSS.body}>
                     <div className={ProductCardCSS.row1}>
                         <div className={ProductCardCSS.row1_col1}>
@@ -42,6 +45,29 @@ function ProductCard() {
             </Card>
       </div>
     )
+  }
+
+  function ImgProduct({value, setValue}){
+
+    const [hearted, setHearted] = useState(false);
+
+    const flag = 1;
+    const handleButton = () => {
+        setHearted(!hearted);
+    }
+
+    return <>
+        <div className={ProductCardCSS.container_img}>
+            <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+            <div className={flag == 1 ? ProductCardCSS.offer : ProductCardCSS.offer_no_show}>
+                40%
+            </div>
+
+            {hearted == true ? 
+                <><HeartFill className={ProductCardCSS.heart_fill} onClick={handleButton}></HeartFill></> : <><Heart className={ProductCardCSS.heart} onClick={handleButton}></Heart></>
+            }
+        </div>
+    </>;
   }
   
   export default ProductCard
