@@ -1,0 +1,35 @@
+.container{
+    border: black solid 1px;
+    padding: 2%;
+    
+}
+
+.container_star img{
+    margin-right: 0.5%;
+}
+
+.star_fill{
+    fill: #FFD300;
+}
+
+.star_no_fill{
+    fill: none;
+    stroke: black;
+}
+
+.sorter{
+    display: flex;
+    div{
+        width: 100%;
+        padding: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: black solid 1px;
+    }
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}

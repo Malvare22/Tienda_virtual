@@ -4,6 +4,10 @@
   font-family: Open Sans;
 }
 
+body{
+  background-color: #EBEFF4;
+}
+
 @font-face {
   font-family: 'Open Sans';
   src: url('assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf');
