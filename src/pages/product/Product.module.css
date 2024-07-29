@@ -1,0 +1,87 @@
+.tittle{
+    font-family: Avenir;
+    font-size: 35px;
+    color: #2B3445;
+    width: 60%;
+}
+
+.price{
+    color: #004AC1;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: end;
+}
+
+.old_price{
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 20px;
+    color: #7D879C;
+    text-decoration: line-through;
+}
+
+.description{
+    font-family: Open Sans;
+    font-weight: normal;
+    font-size: 16px;
+    color: #2B3445;
+}
+
+.limit{
+    font-family: Open Sans;
+    font-weight: normal;
+    font-size: 12px;
+    color: #E6406D;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_information{
+    border: black solid 2px;
+    width: 65%;
+    padding: 3%;
+}
+
+
+.score{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    svg{
+        width: 30px;
+        height: 30px;
+        margin-right: 1%;
+    }
+}
+
+.row3{
+
+    > div{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2%;
+    }
+}
+
+.row4{
+    position: relative;
+    height: 260px;
+
+    img{
+        position: absolute;
+        left: -11%;
+    }
+}
+
+.container{
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.container_preview{
+    width: 30%;
+}

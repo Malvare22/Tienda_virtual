@@ -1,5 +1,6 @@
 .container_star img{
     margin-right: 0.5%;
+    display: flex;
 }
 
 .star_fill{
