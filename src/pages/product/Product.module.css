@@ -2,7 +2,7 @@
     font-family: Avenir;
     font-size: 35px;
     color: #2B3445;
-    width: 60%;
+    width: 80%;
 }
 
 .price{
@@ -42,7 +42,7 @@
 
 .container_information{
     border: black solid 2px;
-    width: 65%;
+    width: 55%;
     padding: 3%;
 }
 
@@ -78,10 +78,19 @@
 
 .container{
     display: flex;
-    padding-left: 4%;
-    padding-right: 4%;
+
+    justify-content: space-between;
+    height: 700px;
 }
 
 .container_preview{
     width: 30%;
+}
+
+.img_panel{
+    display: flex;
+}
+
+.img_preview{
+    margin: 15%;
 }

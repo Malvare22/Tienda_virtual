@@ -1,0 +1,47 @@
+.container{
+    position: relative;
+    img{
+        position: relative;
+        
+    }
+}
+
+.offer{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    background-color: #E6406D;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.offer_no_show{
+    visibility: hidden;
+}
+
+.heart_fill, .heart{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.heart_fill{
+    fill: #E6406D;
+
+}
+
+.heart{
+    fill: black;
+}

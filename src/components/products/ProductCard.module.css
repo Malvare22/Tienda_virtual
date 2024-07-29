@@ -1,53 +1,9 @@
-.container, .container_img{
+.container{
     width: 320px;
-    img{
-        width: 320px;
-        height: 370px;
-    }
 }
 
 .container_img{
     position: relative;
-}
-
-.offer{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  
-    background-color: #E6406D;
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    border-radius: 50%;
-
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-}
-
-.heart_fill, .heart{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
-.heart_fill{
-    fill: #E6406D;
-
-}
-
-.heart{
-    fill: black;
-}
-
-.offer_no_show{
-    visibility: hidden;
 }
 
 .row1, .row2{
@@ -98,5 +54,15 @@
     font-size: 11px;
     font-weight: bold;
     margin-right: 10px;
+}
+
+.score{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    svg{
+        width: 20px;
+        height: 20px;
+        margin-right: 1%;
+    }
 }
 
