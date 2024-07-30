@@ -1,0 +1,262 @@
+{
+    "phones": [
+      {
+        "name": "iPhone 13 Pro",
+        "price": 999.99,
+        "description": "El iPhone 13 Pro presenta una pantalla Super Retina XDR con ProMotion, una cámara avanzada y un chip A15 Bionic.",
+        "discount": 10,
+        "manufacturer": "Apple",
+        "weight": "204g",
+        "dimensions": "146.7 x 71.5 x 7.65 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "MLVE3LL/A",
+        "color": "Grafito",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Face ID, Sistema de triple cámara, Modo nocturno",
+        "componentsIncluded": "iPhone, Cable USB-C a Lightning, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Juan Pérez",
+            "rating": 5,
+            "comment": "¡Teléfono increíble con un rendimiento excepcional!"
+          },
+          {
+            "reviewer": "Ana Gómez",
+            "rating": 4,
+            "comment": "Gran cámara y pantalla, pero un poco caro."
+          }
+        ]
+      },
+      {
+        "name": "Samsung Galaxy S21 Ultra",
+        "price": 1199.99,
+        "description": "El Galaxy S21 Ultra es el último buque insignia de Samsung con una pantalla Dynamic AMOLED 2X y cámara de 108MP.",
+        "discount": 15,
+        "manufacturer": "Samsung",
+        "weight": "228g",
+        "dimensions": "165.1 x 75.6 x 8.9 mm",
+        "countryOfOrigin": "Corea del Sur",
+        "modelNumber": "SM-G998B/DS",
+        "color": "Negro Fantasma",
+        "material": "Gorilla Glass Victus",
+        "numberOfPieces": 1,
+        "specialFeatures": "Grabación de video 8K, 5G, Soporte para S Pen, Cámara de 108MP",
+        "componentsIncluded": "Teléfono, Cable USB-C, Pin de expulsión, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Alicia Rodríguez",
+            "rating": 5,
+            "comment": "El mejor teléfono Android que he usado."
+          },
+          {
+            "reviewer": "Carlos Hernández",
+            "rating": 4,
+            "comment": "Pantalla y cámara fantásticas, pero la batería podría ser mejor."
+          }
+        ]
+      },
+      {
+        "name": "Google Pixel 6",
+        "price": 799.99,
+        "description": "El Google Pixel 6 ofrece una experiencia Android pura con una cámara excelente y el nuevo chip Google Tensor.",
+        "discount": 5,
+        "manufacturer": "Google",
+        "weight": "207g",
+        "dimensions": "158.6 x 74.8 x 8.9 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "GA02900-US",
+        "color": "Sorta Seafoam",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Google Assistant, Seguridad Titan M2, Borrador mágico",
+        "componentsIncluded": "Teléfono, Cable USB-C, Adaptador Quick Switch, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Mario López",
+            "rating": 4,
+            "comment": "Gran experiencia de software y cámara, pero podría ser más duradero."
+          },
+          {
+            "reviewer": "Luisa Martínez",
+            "rating": 5,
+            "comment": "La mejor relación calidad-precio en un teléfono Android con una cámara fantástica."
+          }
+        ]
+      },
+      {
+        "name": "OnePlus 9 Pro",
+        "price": 969.99,
+        "description": "El OnePlus 9 Pro cuenta con una pantalla Fluid AMOLED de 120 Hz y una cámara desarrollada en colaboración con Hasselblad.",
+        "discount": 10,
+        "manufacturer": "OnePlus",
+        "weight": "197g",
+        "dimensions": "163.2 x 73.6 x 8.7 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "LE2123",
+        "color": "Verde Pino",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Carga rápida Warp Charge 65T, Cámara Hasselblad",
+        "componentsIncluded": "Teléfono, Cable Warp Charge, Cargador Warp, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Andrés García",
+            "rating": 5,
+            "comment": "Rendimiento increíble y carga súper rápida."
+          },
+          {
+            "reviewer": "Elena Torres",
+            "rating": 4,
+            "comment": "Gran cámara y pantalla, pero el software puede mejorar."
+          }
+        ]
+      },
+      {
+        "name": "Xiaomi Mi 11",
+        "price": 749.99,
+        "description": "El Xiaomi Mi 11 ofrece una pantalla AMOLED de 6.81 pulgadas, cámara de 108MP y carga rápida de 55W.",
+        "discount": 5,
+        "manufacturer": "Xiaomi",
+        "weight": "196g",
+        "dimensions": "164.3 x 74.6 x 8.1 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "M2011K2G",
+        "color": "Horizon Blue",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Pantalla 120Hz, Cámara de 108MP, Carga inalámbrica",
+        "componentsIncluded": "Teléfono, Cargador, Cable USB-C, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Isabel Navarro",
+            "rating": 5,
+            "comment": "Excelente relación calidad-precio y gran pantalla."
+          },
+          {
+            "reviewer": "Pedro Sánchez",
+            "rating": 4,
+            "comment": "Buen rendimiento, pero la duración de la batería podría ser mejor."
+          }
+        ]
+      },
+      {
+        "name": "Sony Xperia 1 III",
+        "price": 1299.99,
+        "description": "El Sony Xperia 1 III ofrece una pantalla OLED 4K HDR de 120 Hz y una cámara con tecnología de lente variable.",
+        "discount": 10,
+        "manufacturer": "Sony",
+        "weight": "186g",
+        "dimensions": "165 x 71 x 8.2 mm",
+        "countryOfOrigin": "Japón",
+        "modelNumber": "XQBC62/B",
+        "color": "Negro",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Pantalla 4K, Cámara con lente variable, Audio Hi-Res",
+        "componentsIncluded": "Teléfono, Cable USB-C, Cargador, Documentación",
+        "reviews": [
+          {
+            "reviewer": "María Rivera",
+            "rating": 5,
+            "comment": "Pantalla y cámara impresionantes, ideal para creadores de contenido."
+          },
+          {
+            "reviewer": "José Fernández",
+            "rating": 4,
+            "comment": "Gran calidad de construcción, pero el precio es alto."
+          }
+        ]
+      },
+      {
+        "name": "Oppo Find X3 Pro",
+        "price": 1149.99,
+        "description": "El Oppo Find X3 Pro cuenta con una pantalla AMOLED de 120 Hz y una cámara microscópica única.",
+        "discount": 12,
+        "manufacturer": "Oppo",
+        "weight": "193g",
+        "dimensions": "163.6 x 74 x 8.3 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "CPH2173",
+        "color": "Gloss Black",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Cámara microscópica, Pantalla de 10 bits, Carga SuperVOOC 2.0",
+        "componentsIncluded": "Teléfono, Cargador SuperVOOC, Cable USB-C, Funda, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Luis Gómez",
+            "rating": 5,
+            "comment": "Cámara microscópica increíble y gran pantalla."
+          },
+          {
+            "reviewer": "Carla Martínez",
+            "rating": 4,
+            "comment": "Muy innovador, pero la batería podría durar más."
+          }
+        ]
+      },
+      {
+        "name": "Huawei P40 Pro",
+        "price": 899.99,
+        "description": "El Huawei P40 Pro ofrece una cámara cuádruple Leica, pantalla OLED y un diseño elegante.",
+        "discount": 8,
+        "manufacturer": "Huawei",
+        "weight": "209g",
+        "dimensions": "158.2 x 72.6 x 9 mm",
+        "countryOfOrigin": "China",
+        "modelNumber": "ELS-NX9",
+        "color": "Plata helada",
+        "material": "Aluminio y Vidrio",
+        "numberOfPieces": 1,
+        "specialFeatures": "5G, Cámara cuádruple Leica, Pantalla OLED, Resistencia al agua IP68",
+        "componentsIncluded": "Teléfono, Cargador, Cable USB-C, Auriculares, Documentación",
+        "reviews": [
+          {
+            "reviewer": "Fernando Ruiz",
+            "rating": 5,
+            "comment": "Cámara espectacular y diseño hermoso."
+          },
+          {
+            "reviewer": "Sofía Blanco",
+            "rating": 4,
+            "comment": "Gran hardware, pero la falta de servicios de Google es un inconveniente."
+          }
+        ]
+      }
+    ],
+      "motorcycles": [
+        {
+          "name": "Honda CBR500R",
+          "price": 6999.99,
+          "description": "La Honda CBR500R es una motocicleta deportiva con un motor bicilíndrico de 471 cc, ideal para pilotos que buscan rendimiento y estilo.",
+          "discount": 5,
+          "manufacturer": "Honda",
+          "weight": "192kg",
+          "dimensions": "2080 x 755 x 1145 mm",
+          "countryOfOrigin": "Japón",
+          "modelNumber": "CBR500R",
+          "color": "Rojo Grand Prix",
+          "material": "Acero y Plástico",
+          "numberOfPieces": 1,
+          "specialFeatures": "ABS, Inyección electrónica, Panel LCD, Faro LED",
+          "componentsIncluded": "Motocicleta, Manual de usuario, Herramientas básicas",
+          "reviews": [
+            {
+              "reviewer": "Luis García",
+              "rating": 5,
+              "comment": "Excelente manejo y gran rendimiento en carretera."
+            },
+            {
+              "reviewer": "Ana López",
+              "rating": 4,
+              "comment": "Diseño deportivo y buena relación calidad-precio."
+            }
+          ]
+        }
+      ]
+    }
+    
+  
+  
+  

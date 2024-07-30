@@ -94,3 +94,8 @@
 .img_preview{
     margin: 15%;
 }
+
+.container_row2{
+    display: flex;
+    
+}

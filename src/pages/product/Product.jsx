@@ -4,15 +4,24 @@ import ProductCSS from './Product.module.css'
 import BuyProtect from '/src/assets/img/buy_protect.png'
 import CreditBanner from '/src/assets/img/credit_banner.png'
 import ImgPrincipal from '/src/components/products/ImgPrincipal.jsx'
+import Specifications from './components/Specifications';
 
 function Product() {
 
-  return (
-    <div className={ProductCSS.container}>
-        <ImgPanel></ImgPanel>
-        <ProductGeneralInformation></ProductGeneralInformation>
-    </div>
-  )
+  return (<>
+        <div className={ProductCSS.container}>
+            <ImgPanel></ImgPanel>
+            <ProductGeneralInformation></ProductGeneralInformation>
+        </div>
+        <div className={ProductCSS.container_row2}>
+            <div>
+                <Specifications></Specifications>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </> )
 }
 
 function ImgPanel(){

@@ -10,8 +10,22 @@ import Footer from './components/footer/Footer.jsx'
 import Header from './components/header/Header.jsx'
 import Home from './pages/home/Home.jsx'
 import Product from './pages/product/Product.jsx';
+import { useEffect, useState } from 'react';
+import { getData } from '/src/services/data.js';
+import {DataContext} from '/src/context/DataContext.jsx';
 
 function App() {
+
+  const [data, setData] = useState(null);
+
+  useEffect(
+     () => {
+      const get = async () => {
+        setData(await getData());
+      };
+      get();
+    }, []
+  )
 
   const router = createBrowserRouter([
     {
@@ -31,7 +45,9 @@ function App() {
   return (
     <>
       <Header></Header>
-          <RouterProvider router={router} />
+          <DataContext.Provider value={{}}>
+            <RouterProvider router={router} />
+          </DataContext.Provider>
         <Footer></Footer>
     </>
   )

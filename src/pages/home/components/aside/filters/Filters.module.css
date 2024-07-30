@@ -5,7 +5,6 @@
 }
 
 .sorter{
-    width: 30%;
     display: flex;
     div{
         width: 100%;
@@ -13,35 +12,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-content: center;
         border: black solid 1px;
     }
 }
 
-.row1{
-    display: flex;
-    margin-right: 1%;
-    > div{
-        margin-right: 5%;
-        margin-bottom: 2%;
-    }
-}
-
 .search_bar{
-    width: 45%;
     display: flex;
     align-items: center;
-    margin-right: 1%;
-    
+    margin: 0;    
 }
 
-.dropdown_categories{
-    background-color: #EBEFF4;
-    width: 500px;
-    font-size: 14;
-    font-weight: normal;
-}
 
-.row2{
+.row1{
     display: flex;
     margin-right: 1%;
 }
@@ -59,4 +42,13 @@
         height: 20px;
         margin-right: 1%;
     }
+}
+
+.categories{
+    width: 300px;
+    margin: 0;
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

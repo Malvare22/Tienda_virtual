@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.container_categories{
+    height: 31px;
+    width: 100%;
+    display: flex;
+    
+    
+}
+
