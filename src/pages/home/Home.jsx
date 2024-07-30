@@ -22,7 +22,7 @@ function Home() {
               <Categories></Categories>
             </div>
             <div className={HomeCSS.container_product}>
-                {data != null && data['phones'].map((p, i) => <ProductCard key={i} name={p.name} price={p.price} discount={p.discount} review={p.reviews} img1={(p.img)[0]} img2={(p.img)[1]}></ProductCard>)}
+                {data != null && data['products'].map((p, i) => <ProductCard key={i} id={p.id} name={p.name} price={p.price} discount={p.discount} review={p.reviews} img1={(p.img)[0]} img2={(p.img)[1]}></ProductCard>)}
             </div>
           </div>
       </div>

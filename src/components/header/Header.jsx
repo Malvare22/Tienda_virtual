@@ -22,12 +22,12 @@ function Header() {
                 </div>
                 
             </div>
-            <div className={HeaderCSS.ad}>
+            {/* <div className={HeaderCSS.ad}>
                     <div>
                         <h3>COMPRA A</h3>
                         <h2>CRÉDITO</h2>
                     </div>
-            </div>
+            </div> */}
     </div>
     <div className={HeaderCSS.categories}>
         <Option text={'Home'}></Option>

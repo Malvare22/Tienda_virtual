@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    > div > div{
+        min-width: 200px;
+        margin-top: 20px;
+    }
+}
+
+.regular, .label{
+   div{
+        margin-top: 2%;
+   }
+}
+
+.regular{
+    font-size: 14px;
+
+    font-weight: normal;
+
+}
+
+.label {
+    color: #2B3445;
+    font-size: 14px;
+    font-weight: bolder;
+}

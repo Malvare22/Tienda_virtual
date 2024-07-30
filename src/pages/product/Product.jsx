@@ -5,17 +5,43 @@ import BuyProtect from '/src/assets/img/buy_protect.png'
 import CreditBanner from '/src/assets/img/credit_banner.png'
 import ImgPrincipal from '/src/components/products/ImgPrincipal.jsx'
 import Specifications from './components/Specifications';
+import {DataContext} from '/src/context/DataContext.jsx'
+import { useContext, useEffect, useState } from 'react';
+import getReviewAverage from '../../utilities/getReviewAverage';
+import getDiscountPrice from '../../utilities/getDiscountPrice';
 
 function Product() {
+    const queryParameters = new URLSearchParams(window.location.search)
+    const id = queryParameters.get("id");
+    const {data} = useContext(DataContext);
+    const [product, setProduct] = useState(null);
+    
+    useEffect(
+        () => {
+            const get = async () => {
+                if(data == null) return;
+                let temp = null;
+                for (let i = 0; i < data['products'].length; i++) {
+                    const current = data['products'][i];
+                   if( id == current['id']){
+                        temp =current;
+                        break;
+                   }      
+                }
+                setProduct(temp);
+            };
 
+            get();
+        }, [data]
+    )
   return (<>
         <div className={ProductCSS.container}>
             <ImgPanel></ImgPanel>
-            <ProductGeneralInformation></ProductGeneralInformation>
+            <ProductGeneralInformation product={product}></ProductGeneralInformation>
         </div>
         <div className={ProductCSS.container_row2}>
             <div>
-                <Specifications></Specifications>
+                <Specifications type={1} product={product}></Specifications>
             </div>
             <div>
 
@@ -32,34 +58,34 @@ function ImgPanel(){
                 <ImgPreview></ImgPreview>
                 <ImgPreview></ImgPreview>
             </div>
-            <ImgPrincipal enable={true} value={40} width={"400px"} height={"700px"}></ImgPrincipal>
+            <ImgPrincipal enable={true} type={2} value={40} width={"400px"} height={"500px"} src1={"https://m.media-amazon.com/images/I/71QQZr2pNSL.jpg"}></ImgPrincipal>
     </div>;
 }
 
 function ImgPreview(){
     return <div className={ProductCSS.img_preview}>
-        <Image height={(600/4) + "px"} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
+        <Image height={(420/4) + "px"} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" />
     </div>;
 }
 
-function ProductGeneralInformation(){
-    return (
-        <div className={ProductCSS.container_information}>
+function ProductGeneralInformation({product}){
+    return (<>
+        {product != null && <div className={ProductCSS.container_information}>
             <div className={ProductCSS.row1}>
                 <div className={ProductCSS.row1_col1}>
                     <div className={ProductCSS.tittle}>
-                        Samsung A10S 13+2MP 64GB, 4GB RAM
+                        {product.name}
                     </div>
                     <div className={ProductCSS.score}>
-                        <StarScore score={4}></StarScore>
+                        <StarScore score={getReviewAverage(product.reviews)}></StarScore>
                     </div>
                 </div>
                 <div className={ProductCSS.row1_col2}>
                     <div className={ProductCSS.price}>
-                        $4,100
+                        ${product.price}
                     </div>
                     <div className={ProductCSS.old_price}>
-                        $3,499
+                        ${getDiscountPrice(product.price, product.discount)}
                     </div>
                     <div className={ProductCSS.methods}>
                         Tarjetas
@@ -67,8 +93,7 @@ function ProductGeneralInformation(){
                 </div>
             </div>
             <div className={ProductCSS.description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.... <br></br>
-                Ver más
+                {product.description}
             </div>
             <div className={ProductCSS.row3}>
                 <div>
@@ -83,8 +108,8 @@ function ProductGeneralInformation(){
 
                 </img>
             </div>
-        </div>
-    );
+        </div>}
+        </>);
 }
 
 export default Product

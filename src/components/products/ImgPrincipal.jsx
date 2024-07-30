@@ -3,7 +3,12 @@ import HeartFill from '../../assets/svg/heart-fill';
 import Heart from '../../assets/svg/heart';
 import { useState } from 'react';
 
-export default function ImgPrincipal({enable = false, value, width, height, src1, src2}){
+/**
+ * 
+ * type 1 -> to card
+ * type 2 -> no hover
+ */
+export default function ImgPrincipal({type = 1, enable = false, value, width, height, src1, src2}){
 
     const [hearted, setHearted] = useState(false);
 
@@ -13,8 +18,13 @@ export default function ImgPrincipal({enable = false, value, width, height, src1
 
     return <>
         <div className={ImgPrincipalCSS.container} style={{width: width, height: height}}>
-            <img className={ImgPrincipalCSS.img1} alt="img_01" src={src1} width={width} height={height} />
-            <img className={ImgPrincipalCSS.img2} alt="img_02" src={src2} width={width} height={height} />
+            {
+                type == 1 ? 
+                <><img className={ImgPrincipalCSS.img1} alt="img_01" src={src1} width={width} height={height} />
+                <img className={ImgPrincipalCSS.img2} alt="img_02" src={src2} width={width} height={height} /></>
+                : <img className={ImgPrincipalCSS} alt="img_01" src={src1} width={width} height={height} />
+            
+             }
             <div className={enable == true ? ImgPrincipalCSS.offer : ImgPrincipalCSS.offer_no_show}>
                 {value}%
             </div>
