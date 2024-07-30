@@ -4,27 +4,30 @@ import ImgPrincipal from './ImgPrincipal';
 import Meta from 'antd/es/card/Meta';
 import { StarScore } from '../star_score/StarScore';
 import { useState } from 'react';
-function ProductCard() {
+import getDiscountPrice from '../../utilities/getDiscountPrice';
+import getReviewAverage from '../../utilities/getReviewAverage';
+
+function ProductCard({name, price, discount, review, img1, img2}) {
 
     return (
       <div className={ProductCardCSS.container}>
-            <Card hoverable cover={<ImgPrincipal enable={true} value={40} width={"320px"} height={"370px"}></ImgPrincipal>}>
+            <Card hoverable cover={<ImgPrincipal enable={true} value={discount} width={"320px"} height={"370px"} src1={img1} src2={img2}></ImgPrincipal>}>
                 <div className={ProductCardCSS.body}>
                     <div className={ProductCardCSS.row1}>
                         <div className={ProductCardCSS.row1_col1}>
                             <div className={ProductCardCSS.tittle}>
-                                Samsung Galaxy
+                                {name}
                             </div>
                             <div className={ProductCardCSS.score}>
-                                <StarScore score={4}></StarScore>
+                                <StarScore score={getReviewAverage(review)}></StarScore>
                             </div>
                         </div>
                         <div className={ProductCardCSS.row1_col2}>
                             <div className={ProductCardCSS.price}>
-                                $3,499
+                                ${getDiscountPrice(price, discount)}
                             </div>
                             <div className={ProductCardCSS.old_price}>
-                                $5,499
+                                ${price}
                             </div>
                         </div>
                     </div>

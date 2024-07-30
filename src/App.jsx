@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <Header></Header>
-          <DataContext.Provider value={{}}>
+          <DataContext.Provider value={{data}}>
             <RouterProvider router={router} />
           </DataContext.Provider>
         <Footer></Footer>

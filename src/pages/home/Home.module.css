@@ -1,6 +1,9 @@
 .container{
     display: flex;
     justify-content: center;
+    > div{
+        margin: 1%;
+    }
 }
 
 .container_categories{
@@ -11,3 +14,12 @@
     
 }
 
+.col2{
+    width: 100%;
+}
+
+.container_product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
