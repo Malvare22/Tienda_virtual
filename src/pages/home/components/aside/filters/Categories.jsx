@@ -26,13 +26,13 @@ export default function Categories({category, setCategory}){
         {
           key: '2',
           label: (
-            <div onClick={() => setCategory('phone')}>Motocicletas</div>
+            <div onClick={() => setCategory('phone')}>Celulares</div>
           ),
         },
         {
           key: '3',
           label: (
-              <div onClick={() => setCategory('motorcycle')}>Celulares</div>
+              <div onClick={() => setCategory('motorcycle')}>Motocicletas</div>
           ),
         },
       ];
