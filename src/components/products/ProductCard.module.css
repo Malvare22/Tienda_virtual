@@ -1,5 +1,8 @@
 .container{
-    width: 320px;
+    width: 280px;
+    > div{
+        height: 550px;
+    }
 }
 
 .container_img{

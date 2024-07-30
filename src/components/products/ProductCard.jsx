@@ -12,7 +12,7 @@ function ProductCard({id, name, price, discount, review, img1, img2}) {
 
     return (
       <div className={ProductCardCSS.container}>
-            <Card hoverable cover={<ImgPrincipal enable={true} value={discount} width={"320px"} height={"370px"} src1={img1} src2={img2}></ImgPrincipal>}>
+            <Card hoverable cover={<ImgPrincipal enable={true} value={discount} width={"280px"} height={"320px"} src1={img1} src2={img2}></ImgPrincipal>}>
                 <div className={ProductCardCSS.body}>
                     <div className={ProductCardCSS.row1}>
                         <div className={ProductCardCSS.row1_col1}>

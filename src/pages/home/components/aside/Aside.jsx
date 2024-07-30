@@ -4,6 +4,7 @@ import { Card } from "antd";
 import Reviews from "./filters/Reviews";
 import Option from "./filters/Option";
 import Cost from "./filters/Cost";
+import AsideCSS from './Aside.module.css'
 
 export default function Aside(){
     const [brand, setBrand] = useState(0);
@@ -13,7 +14,7 @@ export default function Aside(){
             <div>
                 <Sorter></Sorter>
             </div>
-            <div>
+            <div className={AsideCSS.card_options}>
                 <Card>
                     <Option label={'Marcas'} value={brand} setValue={setBrand}></Option>
                     <Cost value={range} setValue={setRange}></Cost>

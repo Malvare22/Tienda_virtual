@@ -86,6 +86,11 @@
     margin: 2%;
 }
 
+.ajust{
+    margin: 2%;
+    margin-left: 100px;
+}
+
 .container_preview{
     width: 30%;
 }
@@ -98,7 +103,31 @@
     margin: 15%;
 }
 
+.tabs{
+    width: 462px;
+    height: 482px;
+}
+
 .container_row2{
     display: flex;
-    
+    justify-content: center;
+    > div{
+        margin: 2%;
+    }
+}
+
+.img_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.details{
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: bold;
 }

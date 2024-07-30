@@ -41,12 +41,25 @@ function Product() {
             <ImgPanel></ImgPanel>
             <ProductGeneralInformation product={product}></ProductGeneralInformation>
         </div>
-        <div className={ProductCSS.container_row2}>
-            <div className={ProductCSS.tabs}>
-                <TabsInformation product={product} type={1}></TabsInformation>
+        
+        <div className={ProductCSS.ajust}>
+            <div className={ProductCSS.details}>
+                Información Detallada del Producto
             </div>
-            <div>
-
+            <div className={ProductCSS.container_row2}>
+                <div className={ProductCSS.img_grid}>
+                    {
+                        product != null && (
+                            product['img'].map(
+                                (image, index) => <Image src={image} key={index} alt={index} height={"482px"} width={"300px"}></Image>
+                            )
+                        )
+                    }
+                </div>
+                <div className={ProductCSS.tabs}>
+                    <TabsInformation product={product} type={1}></TabsInformation>
+                </div>
+                
             </div>
         </div>
     </> )
