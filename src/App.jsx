@@ -31,24 +31,31 @@ function App() {
     {
       path: "/",
       element: (
-        <Home></Home>
+        <>
+          <Header></Header>
+          <Home></Home>
+          <Footer></Footer>
+
+        </>
       ),
     },
     {
       path: "product",
       element: (
-        <Product></Product>
+        <>
+          <Header></Header>
+          <Product></Product>
+          <Footer></Footer>
+        </>
       ),
     },
   ]);
 
   return (
     <>
-      <Header></Header>
           <DataContext.Provider value={{data}}>
             <RouterProvider router={router} />
           </DataContext.Provider>
-        <Footer></Footer>
     </>
   )
 }

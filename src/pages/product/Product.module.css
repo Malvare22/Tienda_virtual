@@ -44,7 +44,7 @@
 }
 
 .container_information{
-    width: 700px;
+    width: 570px;
     padding: 1%;
 }
 
@@ -86,17 +86,18 @@
     margin: 2%;
 }
 
-.ajust{
-    margin: 2%;
-    margin-left: 100px;
-}
-
 .container_preview{
     width: 30%;
 }
 
 .img_panel{
     display: flex;
+    > div{
+        margin-right: 26px;
+    }
+    > div > div{
+        margin-bottom: 10%;
+    }
 }
 
 .img_preview{
@@ -109,8 +110,9 @@
 }
 
 .container_row2{
+    margin-left: 78px;
+
     display: flex;
-    justify-content: center;
     > div{
         margin: 2%;
     }
@@ -121,13 +123,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     max-width: 600px;
-    padding: 10px;
-    width: 100%;
     box-sizing: border-box;
 }
 
 .details{
-    margin-left: 30px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
+    margin-left: 100px;
 }

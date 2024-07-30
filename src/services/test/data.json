@@ -173,11 +173,7 @@
         }
       ],
       "img": [
-        "https://images.mi.com/global/mi-11/images/mi-11-main-image.jpg",
-        "https://i.blogs.es/4a83eb/xiaomi-mi-11-01/1366_2000.jpg",
-        "https://www.xiaomist.com/wp-content/uploads/2021/07/Xiaomi-Mi-11.jpg",
-        "https://img1.xiaomist.com/2021/01/xiaomi-mi-11.jpg"
-      ],
+        "https://i0.wp.com/conectamos.shop/wp-content/uploads/2021/05/xiaomi_mi_11_lite_04_azul_ad_l.jpg?fit=800%2C800&ssl=1", "https://m.media-amazon.com/images/I/41UyuMzXChL._SL500_.jpg"],
       "category": "phone"
     },
     {
@@ -209,10 +205,7 @@
         }
       ],
       "img": [
-        "https://www.honda.es/content/dam/brand/honda/es/modelos/cbr500r/2023/cbr500r-2023-01.jpg",
-        "https://motorcycles.honda.com/-/media/Honda-Motorcycles/Images/Models/2022/CBR500R/CBR500R-MY22-PY01.jpg",
-        "https://i.ebayimg.com/images/g/kWMAAOSw5V5gXSyy/s-l1600.jpg",
-        "https://cdn.shopify.com/s/files/1/0336/7801/products/Honda-CBR500R-2021_800x.jpg"
+        "https://www.motofichas.com/images/phocagallery/Honda/cbr500r-2024/11-honda-cbr500r-2024-estudio-negro-01.jpg","https://motos.honda.com.ec/uploads/galeria/2022-CBR500R_studio_modelE_0002_M.jpeg"
       ],
       "category": "motorcycle"
     },
@@ -245,10 +238,7 @@
         }
       ],
       "img": [
-        "https://www.kawasaki.es/content/dam/kawasaki/es/models/ninja-zx-6r/2023/ninja-zx-6r-2023-1.jpg",
-        "https://www.kawasaki.es/content/dam/kawasaki/es/models/ninja-zx-6r/2023/ninja-zx-6r-2023-2.jpg",
-        "https://m.media-amazon.com/images/I/71XMxEv1nlL.jpg",
-        "https://cdn.shopify.com/s/files/1/0065/1124/products/2022-Kawasaki-Ninja-ZX-6R-F_1024x1024.jpg"
+        "https://publimotos.com/wp-content/uploads/2023/11/AGRESIVA-Asi-se-denomina-la-nueva-Kawasaki-Ninja-ZX-6R-2024-con-que-viene.jpg", "https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/th_19ZX636G_201BK1DRS3CG_A.jpg"
       ],
       "category": "motorcycle"
     },
@@ -281,10 +271,40 @@
         }
       ],
       "img": [
-        "https://i.ytimg.com/vi/8LrjXb1nO8I/maxresdefault.jpg",
-        "https://www.yamahamotorsports.com/media/57334/yzf-r3.jpg",
-        "https://cdn.shopify.com/s/files/1/0954/6018/products/2021-Yamaha-YZF-R3-Moto.jpg",
-        "https://www.yamaha-motor.com.mx/motorcycles/2023/supersport/yzf-r3/images/color1.jpg"
+        "https://soymotero.net/wp-content/uploads/2018/09/Yamaha_YZF-R3_Replica_Movistar_01.jpg", "https://360view.3dmodels.org/zoom/Yamaha/Yamaha_YZF_R3_2015_1000_0001.jpg"
+      ],
+      "category": "motorcycle"
+    },
+    {
+      "id": 9,
+      "name": "Boxer BM 150",
+      "price": 2999.99,
+      "description": "La Boxer BM 150 es una motocicleta robusta y confiable, ideal para el transporte diario y viajes cortos. Su motor de 150cc ofrece un buen equilibrio entre rendimiento y eficiencia de combustible.",
+      "discount": 5,
+      "manufacturer": "Boxer",
+      "weight": "130kg",
+      "dimensions": "2050 x 750 x 1100 mm",
+      "countryOfOrigin": "India",
+      "modelNumber": "BM 150",
+      "color": "Negro y Rojo",
+      "material": "Acero y Plástico",
+      "numberOfPieces": 1,
+      "specialFeatures": "Sistema de frenos CBS, Rines de aleación, Diseño ergonómico",
+      "componentsIncluded": "Motocicleta, Manual del usuario, Kit de herramientas",
+      "reviews": [
+        {
+          "reviewer": "Carlos Hernández",
+          "rating": 2,
+          "comment": "Una moto económica y duradera, perfecta para uso urbano."
+        },
+        {
+          "reviewer": "Ana Sánchez",
+          "rating": 2,
+          "comment": "Buena moto, aunque el diseño podría ser más moderno."
+        }
+      ],
+      "img": [
+        "https://www.colcamer.com/wp-content/uploads/2023/02/BOXER-150-Negro-Nebulosa-Azul-hd-01.webp", "https://image.made-in-china.com/44f3j00njGlTZrFYfzR/Bm150-Dirtbike-de-alta-calidad-motocicleta-para-Bajaj-Boxer-BM.webp"
       ],
       "category": "motorcycle"
     }

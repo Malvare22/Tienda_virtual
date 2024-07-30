@@ -17,7 +17,7 @@ function ProductCard({id, name, price, discount, review, img1, img2}) {
                     <div className={ProductCardCSS.row1}>
                         <div className={ProductCardCSS.row1_col1}>
                             <div className={ProductCardCSS.tittle}>
-                               <Link to={'product/?id='+id}>{name}</Link>
+                               <Link to={'/product/?id='+id}>{name}</Link>
                             </div>
                             <div className={ProductCardCSS.score}>
                                 <StarScore score={getReviewAverage(review)}></StarScore>

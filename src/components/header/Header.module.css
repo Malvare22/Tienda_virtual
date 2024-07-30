@@ -87,9 +87,13 @@
 }
 
 .categories{
+    a{
+        text-decoration: none;
+        color: #2B3445;
+
+    }
     display: flex;
     font-weight: bold;
-    color: #2B3445;
     padding-left: 2%;
     border-bottom: black solid 2px;
 }

@@ -1,6 +1,7 @@
 import Logo from '/src/assets/svg/logo.svg';
 import Car from '/src/assets/svg/car.svg';
 import HeaderCSS from './Header.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
 
@@ -30,9 +31,9 @@ function Header() {
             </div> */}
     </div>
     <div className={HeaderCSS.categories}>
-        <Option text={'Home'}></Option>
-        <Option text={'Celulares'}></Option>
-        <Option text={'Motocicletas'}></Option>
+        <Option text={'Home'} link='/'></Option>
+        <Option text={'Celulares'} link='/?category=phone'></Option>
+        <Option text={'Motocicletas'} link='/?category=motorcycle'></Option>
         <Option text={'Tus préstamos'}></Option>
         <Option text={'Tiendas'}></Option>
         <Option text={'Tracking'}></Option>
@@ -44,13 +45,11 @@ function Header() {
     
 }
 
-const Option = ({text, url}) => {
+const Option = ({text, link = ""}) => {
 
     return(<>
         <div>
-            <div>
-               {text}
-            </div>
+            <Link to={link}>{text}</Link>
             <div className={HeaderCSS.line}>
                 <svg viewBox="0 0 10 4" xmlns="http://www.w3.org/2000/svg">
                     <line x1="3" y1="0" x2="7" y2="0" />

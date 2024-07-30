@@ -11,20 +11,22 @@ import getReviewAverage from '../../utilities/getReviewAverage';
 import getDiscountPrice from '../../utilities/getDiscountPrice';
 import TabsInformation from './components/TabsInformation';
 import Review from './components/Review';
+import ProductRelated from '../../components/products/ProductRelated';
+import { useSearchParams } from 'react-router-dom';
 
 function Product() {
-    const queryParameters = new URLSearchParams(window.location.search)
-    const id = queryParameters.get("id");
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
     const {data} = useContext(DataContext);
     const [product, setProduct] = useState(null);
-    
+    console.log(product)
     useEffect(
         () => {
             const get = async () => {
                 if(data == null) return;
                 let temp = null;
-                for (let i = 0; i < data['products'].length; i++) {
-                    const current = data['products'][i];
+                for (let i = 0; i < data.length; i++) {
+                    const current = data[i];
                    if( id == current['id']){
                         temp =current;
                         break;
@@ -34,11 +36,17 @@ function Product() {
             };
 
             get();
-        }, [data]
+        }, [data, id]
     )
-  return (<>
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [id]);
+
+  return (<>{product != null && <>
+    
         <div className={ProductCSS.container}>
-            <ImgPanel></ImgPanel>
+            <ImgPanel product={product}></ImgPanel>
             <ProductGeneralInformation product={product}></ProductGeneralInformation>
         </div>
         
@@ -51,7 +59,7 @@ function Product() {
                     {
                         product != null && (
                             product['img'].map(
-                                (image, index) => <Image src={image} key={index} alt={index} height={"482px"} width={"300px"}></Image>
+                                (image, index) => <Image src={image} key={index} alt={index} height={"382px"} width={"260px"}></Image>
                             )
                         )
                     }
@@ -59,21 +67,24 @@ function Product() {
                 <div className={ProductCSS.tabs}>
                     <TabsInformation product={product} type={1}></TabsInformation>
                 </div>
-                
             </div>
         </div>
+        <ProductRelated category={product['category']}></ProductRelated>
+  </>}
     </> )
 }
 
-function ImgPanel(){
+function ImgPanel({product}){
+
+    const [imgIndex, setImgIndex,] = useState(0);
+
     return <div className={ProductCSS.img_panel}>
             <div>
-                <ImgPreview></ImgPreview>
-                <ImgPreview></ImgPreview>
-                <ImgPreview></ImgPreview>
-                <ImgPreview></ImgPreview>
+                {product != null && product['img'].map(
+                    (img, index) => <div key={index}><img onMouseEnter={() => setImgIndex(index)} src={img} width={(420/product['img'].length)+'px'}></img></div>
+                )}
             </div>
-            <ImgPrincipal enable={true} type={2} value={40} width={"400px"} height={"500px"} src1={"https://m.media-amazon.com/images/I/71QQZr2pNSL.jpg"}></ImgPrincipal>
+            <ImgPrincipal enable={true} type={2} value={40} width={"325px"} height={"500px"} src1={product['img'][imgIndex]}></ImgPrincipal>
     </div>;
 }
 

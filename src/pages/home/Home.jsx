@@ -7,8 +7,12 @@ import ProductCard from '/src/components/products/ProductCard.jsx'
 import { useContext, useEffect, useState } from 'react';
 import {DataContext} from '/src/context/DataContext.jsx'
 import { sorterFunctions } from '../../utilities/sorterFunctions.js';
+import { useSearchParams } from 'react-router-dom';
 
 function Home() {
+
+  const [searchParams] = useSearchParams();
+  const aux = searchParams.get('category');
 
   const {data} = useContext(DataContext);
 
@@ -17,6 +21,13 @@ function Home() {
   const [category, setCategory] = useState(null);
 
   const [sort, setSort] = useState(0);
+
+  useEffect(
+    () => {
+      if(aux != null) setCategory(aux);
+
+    }, [aux]
+  )
 
   const filteredData = () => {
     let filtered = data;
@@ -38,6 +49,7 @@ function Home() {
               <SearchBar search={search} setSearch={setSearch}></SearchBar>
               <Categories category={category} setCategory={setCategory}></Categories>
             </div>
+            {/**Estos son los productos */}
             <div className={HomeCSS.container_product}>
                 {data != null && filteredData().map((p, i) => <ProductCard key={i} id={p.id} name={p.name} price={p.price} discount={p.discount} review={p.reviews} img1={(p.img)[0]} img2={(p.img)[1]}></ProductCard>)}
             </div>
