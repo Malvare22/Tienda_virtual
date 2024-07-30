@@ -1,27 +1,18 @@
-import { Tabs } from "antd";
 import SpecificationsCSS from './Specifications.module.css';
 
+/**
+ * 
+ * type 1 -> Cellphone
+ * type 2-> Motorcycle
+ */
 export default function Specifications({type, product}){
 
-  const items = [
-    {
-      key: '1',
-      label: <div className={SpecificationsCSS.label}>Otras Especificaciones</div>,
-      children: <CellPhone product={product}></CellPhone>,
-    },
-    {
-      key: '2',
-      label: <div className={SpecificationsCSS.label}>Reviews</div>,
-      children: 'Content of Tab Pane 2',
-    },
-  ];
-
     return<>
-      <Tabs defaultActiveKey="1" items={items} />
+      {type == 1 ? <SpecificationsCellPhone product={product}></SpecificationsCellPhone> : <div></div>}
     </>;
 }
 
-function CellPhone({product}){
+function SpecificationsCellPhone({product}){
 
   return<div className={SpecificationsCSS.container}>
       {product != null && (<>

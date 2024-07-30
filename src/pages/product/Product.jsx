@@ -1,4 +1,4 @@
-import { Image } from 'antd';
+import { Image, Tabs } from 'antd';
 import { StarScore } from '../../components/star_score/StarScore';
 import ProductCSS from './Product.module.css'
 import BuyProtect from '/src/assets/img/buy_protect.png'
@@ -9,6 +9,8 @@ import {DataContext} from '/src/context/DataContext.jsx'
 import { useContext, useEffect, useState } from 'react';
 import getReviewAverage from '../../utilities/getReviewAverage';
 import getDiscountPrice from '../../utilities/getDiscountPrice';
+import TabsInformation from './components/TabsInformation';
+import Review from './components/Review';
 
 function Product() {
     const queryParameters = new URLSearchParams(window.location.search)
@@ -40,8 +42,8 @@ function Product() {
             <ProductGeneralInformation product={product}></ProductGeneralInformation>
         </div>
         <div className={ProductCSS.container_row2}>
-            <div>
-                <Specifications type={1} product={product}></Specifications>
+            <div className={ProductCSS.tabs}>
+                <TabsInformation product={product} type={1}></TabsInformation>
             </div>
             <div>
 

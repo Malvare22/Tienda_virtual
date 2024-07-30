@@ -1,0 +1,27 @@
+.rating{
+    
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.container{
+    background-color: #0000000D;
+    width: 600px;
+    border: solid black 1px;
+    padding: 2%;
+    div {
+        margin-bottom: 10px;
+    }
+}
+
+.comment{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.reviewer{
+    font-size: 18px;
+    font-weight: bold;
+}
