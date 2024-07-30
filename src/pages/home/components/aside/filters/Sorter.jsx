@@ -2,34 +2,45 @@ import { Dropdown, Space } from "antd";
 import FiltersCSS from './Filters.module.css'
 import { DownOutlined } from '@ant-design/icons';
 
-export default function Sorter(){
+export default function Sorter({sort, setSort}){
+
+  console.log(sort)
+  const labels = [
+    <>Ordenar por<DownOutlined/></>,
+    "Precios Altos",
+    "Precios Bajos",
+    "Mejores Reviews",
+    "Peores Reviews"
+  ];
 
   const items = [
     {
       key: '1',
       label: (
-          <>Precios Altos</>
+          <div onClick={() => setSort(1)}>Precios Altos</div>
       ),
     },
     {
       key: '2',
       label: (
-        <>Precios Bajos</>
+        <div onClick={() => setSort(2)}>Precios Bajos</div>
       ),
     },
     {
       key: '3',
       label: (
-        <>Mejores Reviews</>
+        <div onClick={() => setSort(3)}>Mejores Reviews</div>
       )
     },
     {
       key: '4',
       label: (
-        <div>Peores Reviews</div>
+        <div onClick={() => setSort(4)}>Peores Reviews</div>
       )
     }
   ];
+
+
 
     return(
         <div className={FiltersCSS.sorter}>
@@ -37,8 +48,7 @@ export default function Sorter(){
             <div>
                 <Dropdown menu={{ items }}>
                     <a onClick={(e) => e.preventDefault()}>
-                        Ordenar por
-                        <DownOutlined/>
+                        <>{labels[sort]}</>
                     </a>
                 </Dropdown>
             </div>

@@ -6,13 +6,13 @@ import Option from "./filters/Option";
 import Cost from "./filters/Cost";
 import AsideCSS from './Aside.module.css'
 
-export default function Aside(){
+export default function Aside({sort, setSort}){
     const [brand, setBrand] = useState(0);
     const [range, setRange] = useState([0, 0]);
     return(
         <div>
             <div>
-                <Sorter></Sorter>
+                <Sorter sort={sort} setSort={setSort}></Sorter>
             </div>
             <div className={AsideCSS.card_options}>
                 <Card>

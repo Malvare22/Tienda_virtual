@@ -6,6 +6,7 @@ import Categories from './components/aside/filters/Categories.jsx';
 import ProductCard from '/src/components/products/ProductCard.jsx'
 import { useContext, useEffect, useState } from 'react';
 import {DataContext} from '/src/context/DataContext.jsx'
+import { sorterFunctions } from '../../utilities/sorterFunctions.js';
 
 function Home() {
 
@@ -14,19 +15,23 @@ function Home() {
   const [search, setSearch] = useState('');
 
   const [category, setCategory] = useState(null);
+
+  const [sort, setSort] = useState(0);
+
   const filteredData = () => {
     let filtered = data;
-    console.log(search)
     if(search.length != 0)  filtered = filtered.filter(p => (p['name'].toLowerCase()).includes(search.toLowerCase()));
     if(category != null)  filtered =  filtered.filter(p => (p['category'] == category));
-    
+    if(sort != 0) {
+      filtered.sort(sorterFunctions[sort - 1]);
+    }
     return filtered;
   }
   return (
     <div>
       <div className={HomeCSS.container}>
           <div>
-            <Aside></Aside>
+            <Aside sort={sort} setSort={setSort}></Aside>
           </div>
           <div className={HomeCSS.col2}>
             <div className={HomeCSS.container_categories}>

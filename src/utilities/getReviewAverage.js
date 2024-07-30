@@ -1,4 +1,4 @@
-export default function getDiscountPrice(reviews){
+export default function getReviewAverage(reviews){
 
     let sum = 0;
     
