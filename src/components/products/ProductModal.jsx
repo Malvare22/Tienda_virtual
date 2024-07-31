@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CheckImg from '/src/assets/img/checkImg.png'
 import getDiscountPrice from '../../utilities/getDiscountPrice';
+import { labels } from '../../utilities/labels';
 
 const style = {
   position: 'absolute',
@@ -57,7 +58,7 @@ export default function ProductModal({product, modal, setModal}) {
                 <div>
                     <img src={CheckImg} width={"64px"}></img>
                 </div>
-                <div className={ProductModalCSS.tax1}>Te vas a llevar este celular por solo </div>
+                <div className={ProductModalCSS.tax1}>Te vas a llevar {labels[product['category']]} por solo </div>
                 <div  className={ProductModalCSS.tax2}>$120 p/semana!</div>
                 <div><Button className={ProductModalCSS.shop_btn}>COMPRAR A CRÉDITO</Button></div>
                 <div className={ProductModalCSS.alternative}>o puedes</div>

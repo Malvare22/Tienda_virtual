@@ -71,3 +71,14 @@
     justify-content: center;
     align-items: center;
 }
+
+.label{
+    color: #013E9B;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.content, .input_range{
+    margin-bottom: 20px;
+}

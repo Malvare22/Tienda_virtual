@@ -17,7 +17,7 @@ export default function Option({label, brand, setBrand}){
             <div className={FiltersCSS.label}>
                 {label}
             </div>
-            <div>
+            <div className={FiltersCSS.content}>
                 {
                     data != null && manufacturers().map(
                         (element, index) => <div key={index}><Checkbox onClick={() => setBrand(element)} checked={brand == element}>{element}</Checkbox></div>

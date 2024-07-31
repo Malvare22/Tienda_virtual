@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import TabsCSS from './TabsInformation';
+import TabsCSS from './TabsInformation.module.css';
 import Specifications from "./Specifications";
 import Review from "./Review";
 
@@ -18,7 +18,7 @@ export default function TabsInformation({type, product}){
     },
     {
       key: '2',
-      label: <div className={TabsCSS.label}>Reviews</div>,
+      label: <div className={TabsCSS.label}>Reviews ({product['reviews'].length})</div>,
       children: <div>
         {product != null && (
           product['reviews'].map(

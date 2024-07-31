@@ -1,14 +1,13 @@
 import { Button, Card, Col, InputNumber, Row, Slider, Switch } from 'antd';
 import AdviceCSS from './Advice.module.css';
+import { labels } from '../../../utilities/labels';
 
 
 export default function Advice({type}){
 
-
-
     return <>
         <Card className={AdviceCSS.container}>
-            <div className={AdviceCSS.tittle}>Lleva este celular <br></br>a Crédito!</div>
+            <div className={AdviceCSS.tittle}>Lleva {labels[type]}<br></br>a Crédito!</div>
             <div className={AdviceCSS.label}>¿Qué necesitas?</div>
             <List>Tu cuenta de Facebook</List>
             <List>Tu INE Vigente</List>

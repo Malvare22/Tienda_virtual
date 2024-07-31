@@ -70,7 +70,7 @@ function Product() {
                     <TabsInformation product={product} type={1}></TabsInformation>
                     </div>
                     <div className={ProductCSS.taxes}>
-                        <Advice></Advice>
+                        <Advice type={product['category']}></Advice>
                         <Taxes product={product}></Taxes>
                     </div>
                 </div>
