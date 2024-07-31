@@ -13,6 +13,7 @@ import Product from './pages/product/Product.jsx';
 import { useEffect, useState } from 'react';
 import { getData } from '/src/services/data.js';
 import {DataContext} from '/src/context/DataContext.jsx';
+import ProductModal from './components/products/ProductModal.jsx';
 
 function App() {
 
@@ -49,6 +50,16 @@ function App() {
         </>
       ),
     },
+    {
+      path: "test",
+      element: (
+        <>
+          <Header></Header>
+          <ProductModal></ProductModal>
+          <Footer></Footer>
+        </>
+      ),
+    }
   ]);
 
   return (

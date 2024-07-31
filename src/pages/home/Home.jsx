@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import {DataContext} from '/src/context/DataContext.jsx'
 import { sorterFunctions } from '../../utilities/sorterFunctions.js';
 import { useSearchParams } from 'react-router-dom';
+import ProductModal from '/src/components/products/ProductModal'
 
 function Home() {
 
@@ -40,6 +41,7 @@ function Home() {
   }
   return (
     <div>
+    <ProductModal></ProductModal>
       <div className={HomeCSS.container}>
           <div>
             <Aside sort={sort} setSort={setSort}></Aside>

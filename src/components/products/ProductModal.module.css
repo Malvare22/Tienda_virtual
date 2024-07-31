@@ -1,0 +1,120 @@
+.row1{
+    height: 140px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.row1_col2{
+    width: 100%;
+    margin: 2%;
+}
+
+.price{
+    text-align: end;
+    color: #004AC1;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.name{
+    text-align: start;
+    color: #2B3445;
+    font-size: 14px;
+    width: 200px;
+    font-weight: bold;
+}
+
+.color, .color_value{
+    text-align: start;
+
+    color: #7D879C;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.color{
+    font-weight: bold;
+}
+
+.color_value{
+    font-weight: bolder;
+}
+
+.color_container{
+    display: flex;
+    > div{
+        margin-right: 4px;
+    }
+}
+
+.row2{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.item, .subtotal_label{
+
+    color: #7D879C;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.subtotal_value{
+    color: #004AC1;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.total_container{
+    display: flex;
+    align-items: center;
+}
+
+.row3{
+    margin: 10px;
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.tax1{
+    color: #2B3445;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.tax2{
+    color: #2B3445;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shop_btn{
+    background-color: #FFD300;
+    color: #004AC1;
+    font-size: 14px;
+    font-weight: normal;
+    width: 200px;
+    height: 46px;
+    margin: 14px;
+}
+
+.alternative{
+    color: #7D879C;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.count{
+    color: #004AC1;
+    font-size: 12px;
+    font-weight: bold;
+}
