@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CheckImg from '/src/assets/img/checkImg.png'
+import getDiscountPrice from '../../utilities/getDiscountPrice';
 
 const style = {
   position: 'absolute',
@@ -19,14 +20,11 @@ const style = {
   boxShadow: 24,
 };
 
-export default function ProductoModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function ProductModal({product, modal, setModal}) {
+  const handleClose = () => setModal(false);
+    const price = getDiscountPrice(product['price'], product['discount']);
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -37,12 +35,12 @@ export default function ProductoModal() {
           <img src={ShopImg} width={"400px"}></img>
           <div className={ProductModalCSS.row1}>
               <div>
-                <img src={ShopImg} width={"100px"} height={"120px"}></img>
+                <img src={product['img'][0]} width={"100px"} height={"120px"}></img>
               </div>
               <div className={ProductModalCSS.row1_col2}>
-                    <div className={ProductModalCSS.price}>Valor</div>
-                    <div className={ProductModalCSS.name}>Samsung A10S 13+2MP 64GB, 4GB RAM</div>
-                    <div className={ProductModalCSS.color_container}><div className={ProductModalCSS.color}>Color seleccionado: </div><div className={ProductModalCSS.color_value}>GRIS</div></div>
+                    <div className={ProductModalCSS.price}>${price}</div>
+                    <div className={ProductModalCSS.name}>{product['name']}</div>
+                    <div className={ProductModalCSS.color_container}><div className={ProductModalCSS.color}>Color seleccionado: </div><div className={ProductModalCSS.color_value}>{product['color']}</div></div>
               </div>
           </div>
           <div>
@@ -51,7 +49,7 @@ export default function ProductoModal() {
                 <div className={ProductModalCSS.item}>1 ítem en tu carrito</div>
                 <div className={ProductModalCSS.total_container}>
                     <div className={ProductModalCSS.subtotal_label}>Subtotal</div>
-                    <div className={ProductModalCSS.subtotal_value}>$3242,032</div>
+                    <div className={ProductModalCSS.subtotal_value}>${price}</div>
                 </div>
             </div>
             <Divider />

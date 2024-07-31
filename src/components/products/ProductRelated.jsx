@@ -18,7 +18,7 @@ export default function ProductRelated({category}) {
         <div className={ProductRelatedCSS.grid}>
             {
                 data != null && filteredData().map(
-                    (p, i) => <ProductCard key={i} id={p['id']} name={p['name']} price={p['price']} discount={p['discount']} review={p['reviews']} img1={p['img'][0]} img2={p['img'][1]}></ProductCard>
+                    (p, i) => <ProductCard key={i} id={p['id']} product={p}></ProductCard>
                 )
             }
         </div>

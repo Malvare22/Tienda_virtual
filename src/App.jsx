@@ -18,6 +18,8 @@ import ProductModal from './components/products/ProductModal.jsx';
 function App() {
 
   const [data, setData] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(false);
+  const [modal, setModal] = useState(false);
 
   useEffect(
      () => {
@@ -35,6 +37,7 @@ function App() {
         <>
           <Header></Header>
           <Home></Home>
+          {modal == true && <ProductModal product={currentProduct} modal={modal} setModal={setModal}></ProductModal>}
           <Footer></Footer>
 
         </>
@@ -46,16 +49,7 @@ function App() {
         <>
           <Header></Header>
           <Product></Product>
-          <Footer></Footer>
-        </>
-      ),
-    },
-    {
-      path: "test",
-      element: (
-        <>
-          <Header></Header>
-          <ProductModal></ProductModal>
+          {modal == true && <ProductModal product={currentProduct} modal={modal} setModal={setModal}></ProductModal>}
           <Footer></Footer>
         </>
       ),
@@ -64,7 +58,7 @@ function App() {
 
   return (
     <>
-          <DataContext.Provider value={{data}}>
+          <DataContext.Provider value={{data, currentProduct, setCurrentProduct, modal, setModal}}>
             <RouterProvider router={router} />
           </DataContext.Provider>
     </>

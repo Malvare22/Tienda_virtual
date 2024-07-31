@@ -8,14 +8,13 @@ import { useContext, useEffect, useState } from 'react';
 import {DataContext} from '/src/context/DataContext.jsx'
 import { sorterFunctions } from '../../utilities/sorterFunctions.js';
 import { useSearchParams } from 'react-router-dom';
-import ProductModal from '/src/components/products/ProductModal'
 
 function Home() {
 
   const [searchParams] = useSearchParams();
   const aux = searchParams.get('category');
 
-  const {data} = useContext(DataContext);
+  const {data, currentProduct, setCurrentProduct} = useContext(DataContext);
 
   const [search, setSearch] = useState('');
 
@@ -41,7 +40,6 @@ function Home() {
   }
   return (
     <div>
-    <ProductModal></ProductModal>
       <div className={HomeCSS.container}>
           <div>
             <Aside sort={sort} setSort={setSort}></Aside>
@@ -53,7 +51,7 @@ function Home() {
             </div>
             {/**Estos son los productos */}
             <div className={HomeCSS.container_product}>
-                {data != null && filteredData().map((p, i) => <ProductCard key={i} id={p.id} name={p.name} price={p.price} discount={p.discount} review={p.reviews} img1={(p.img)[0]} img2={(p.img)[1]}></ProductCard>)}
+                {data != null && filteredData().map((p, i) => <ProductCard key={i} product={p}></ProductCard>)}
             </div>
           </div>
       </div>

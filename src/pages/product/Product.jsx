@@ -21,7 +21,6 @@ function Product() {
     const id = searchParams.get('id');
     const {data} = useContext(DataContext);
     const [product, setProduct] = useState(null);
-    console.log(product)
     useEffect(
         () => {
             const get = async () => {

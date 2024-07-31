@@ -4,7 +4,6 @@ import { DownOutlined } from '@ant-design/icons';
 
 export default function Sorter({sort, setSort}){
 
-  console.log(sort)
   const labels = [
     <>Ordenar por<DownOutlined/></>,
     "Precios Altos",
