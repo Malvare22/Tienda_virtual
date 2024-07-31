@@ -8,7 +8,7 @@ export default function SearchBar({search, setSearch}){
     };
     return(
         <div className={FiltersCSS.search_bar}>
-            <Search placeholder="input search text" onChange={onSearch} value={search} style={{ width: "400px" }} />
+            <Search placeholder="" onChange={onSearch} value={search} style={{ width: "400px" }} />
         </div>
     );
 } 

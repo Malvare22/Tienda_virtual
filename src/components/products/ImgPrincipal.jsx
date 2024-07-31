@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
  * type 1 -> to card
  * type 2 -> no hover
  */
-export default function ImgPrincipal({type = 1, product, width, height}){
+export default function ImgPrincipal({type = 1, img, product, width, height}){
 
     const [hearted, setHearted] = useState(false);
 
@@ -41,7 +41,7 @@ export default function ImgPrincipal({type = 1, product, width, height}){
                 product != null && type == 1 ? 
                 <><img className={ImgPrincipalCSS.img1} alt="img_01" src={product['img'][0]} width={width} height={height} />
                 <img className={ImgPrincipalCSS.img2} alt="img_02" src={product['img'][1]} width={width} height={height} /></>
-                : <img className={ImgPrincipalCSS.img1} alt="img_01" src={product['img'][0]} width={width} height={height} />
+                : <img className={ImgPrincipalCSS.img1} alt="img_01" src={img} width={width} height={height} />
             
              }
             <div className={product['discount'] != 0 ? ImgPrincipalCSS.offer : ImgPrincipalCSS.offer_no_show}>

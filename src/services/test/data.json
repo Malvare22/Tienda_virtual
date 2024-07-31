@@ -34,7 +34,8 @@
         "https://http2.mlstatic.com/D_NQ_NP_964760-MLA74364782075_022024-O.webp",
         "https://siliconecasepereira.com/wp-content/uploads/2022/03/Iphone-13-pro-max-blanco-flores.jpg"
       ],
-      "category": "phone"
+      "category": "phone",
+      "sales": 21
     },
     {
       "id": 2,
@@ -70,7 +71,8 @@
         "https://sescol.com/wp-content/uploads/2024/05/Samsung-s21-.-sescol.jpg",
         "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2021/01/27/16117672059051.png"
       ],
-      "category": "phone"
+      "category": "phone",
+      "sales": 23
     },
     {
       "id": 3,
@@ -106,7 +108,8 @@
         "https://imei.org/storage/files/images/6286/preview/oneplus-9-pro-2.png",
         "https://www.notebookcheck.org/uploads/tx_nbc2/4_zu_3_OnePlus_9_Pro.jpg"
       ],
-      "category": "phone"
+      "category": "phone",
+      "sales": 25
     },
     {
       "id": 4,
@@ -142,7 +145,8 @@
         "https://m.media-amazon.com/images/I/71SGl7xwR-L.jpg",
         "https://i.blogs.es/6fc7ff/google-pixel-6-ficha-tecnica/1366_2000.jpg"
       ],
-      "category": "phone"
+      "category": "phone",
+      "sales": 300
     },
     {
       "id": 5,
@@ -174,7 +178,8 @@
       ],
       "img": [
         "https://i0.wp.com/conectamos.shop/wp-content/uploads/2021/05/xiaomi_mi_11_lite_04_azul_ad_l.jpg?fit=800%2C800&ssl=1", "https://m.media-amazon.com/images/I/41UyuMzXChL._SL500_.jpg"],
-      "category": "phone"
+      "category": "phone",
+      "sales": 4000
     },
     {
       "id": 6,
@@ -207,7 +212,8 @@
       "img": [
         "https://www.motofichas.com/images/phocagallery/Honda/cbr500r-2024/11-honda-cbr500r-2024-estudio-negro-01.jpg","https://motos.honda.com.ec/uploads/galeria/2022-CBR500R_studio_modelE_0002_M.jpeg"
       ],
-      "category": "motorcycle"
+      "category": "motorcycle",
+      "sales": 800
     },
     {
       "id": 7,
@@ -240,7 +246,8 @@
       "img": [
         "https://publimotos.com/wp-content/uploads/2023/11/AGRESIVA-Asi-se-denomina-la-nueva-Kawasaki-Ninja-ZX-6R-2024-con-que-viene.jpg", "https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/th_19ZX636G_201BK1DRS3CG_A.jpg"
       ],
-      "category": "motorcycle"
+      "category": "motorcycle",
+      "sales": 4200
     },
     {
       "id": 8,
@@ -273,7 +280,8 @@
       "img": [
         "https://soymotero.net/wp-content/uploads/2018/09/Yamaha_YZF-R3_Replica_Movistar_01.jpg", "https://360view.3dmodels.org/zoom/Yamaha/Yamaha_YZF_R3_2015_1000_0001.jpg"
       ],
-      "category": "motorcycle"
+      "category": "motorcycle",
+      "sales": 1200
     },
     {
       "id": 9,
@@ -306,7 +314,8 @@
       "img": [
         "https://www.colcamer.com/wp-content/uploads/2023/02/BOXER-150-Negro-Nebulosa-Azul-hd-01.webp", "https://image.made-in-china.com/44f3j00njGlTZrFYfzR/Bm150-Dirtbike-de-alta-calidad-motocicleta-para-Bajaj-Boxer-BM.webp"
       ],
-      "category": "motorcycle"
+      "category": "motorcycle",
+      "sales": 4000
     }
   ]
 }

@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import {DataContext} from '/src/context/DataContext.jsx'
 import { sorterFunctions } from '../../utilities/sorterFunctions.js';
 import { useSearchParams } from 'react-router-dom';
+import ProductRelated from '../../components/products/ProductRelated.jsx';
 
 function Home() {
 
@@ -56,6 +57,7 @@ function Home() {
           </div>
       </div>
       <Banner></Banner>
+      <ProductRelated type={2}></ProductRelated>
     </div>
   )
 }

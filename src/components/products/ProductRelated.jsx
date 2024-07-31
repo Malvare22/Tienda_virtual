@@ -3,18 +3,31 @@ import ProductRelatedCSS from './ProductRelated.module.css'
 import { useContext } from 'react';
 import ProductCard from './ProductCard';
 
-export default function ProductRelated({category}) {
+/**
+ *  type 1 = Relacionados 
+ *  type 2 = más vendidos
+ */
+export default function ProductRelated({type = 1, category}) {
     
     const {data} = useContext(DataContext);
 
+    const bestSellers = (a, b) => b['sales'] - a['sales']; 
+
     const filteredData = () => {
-        const filtered = data.filter(p => (p['category'] == category));
+        let filtered = data;
+        
+        if(type == 1){
+            filtered = data.filter(p => (p['category'] == category));
+        }
+        else{
+            filtered.sort(bestSellers);
+        }
         return filtered.slice(0, 3);
       }
 
     return (
     <div className={ProductRelatedCSS.container}>
-        <div className={ProductRelatedCSS.label}>Productos Relacionados</div>
+        <div className={ProductRelatedCSS.label}>{type == 1 ? "Productos Relacionados" : "Nuestros Productos Más Vendidos"}</div>
         <div className={ProductRelatedCSS.grid}>
             {
                 data != null && filteredData().map(

@@ -5,7 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 export default function Sorter({sort, setSort}){
 
   const labels = [
-    <>Ordenar por<DownOutlined/></>,
+    "Selecciona",
     "Precios Altos",
     "Precios Bajos",
     "Mejores Reviews",
@@ -43,11 +43,11 @@ export default function Sorter({sort, setSort}){
 
     return(
         <div className={FiltersCSS.sorter}>
-            <div>Ordenar por</div>
-            <div>
+            <div className={FiltersCSS.sorter_label}>Ordenar por</div>
+            <div className={FiltersCSS.sorter_option}>
                 <Dropdown menu={{ items }}>
                     <a onClick={(e) => e.preventDefault()}>
-                        <>{labels[sort]}</>
+                        <>{labels[sort]}<DownOutlined/></>
                     </a>
                 </Dropdown>
             </div>

@@ -7,7 +7,6 @@
 .sorter{
     display: flex;
     div{
-        width: 100%;
         padding: 1%;
         display: flex;
         justify-content: center;
@@ -15,6 +14,15 @@
         align-content: center;
         border: black solid 1px;
     }
+}
+
+
+.sorter_label{
+    width: 40%
+}
+
+.sorter_option{
+   width: 60%;
 }
 
 .search_bar{
