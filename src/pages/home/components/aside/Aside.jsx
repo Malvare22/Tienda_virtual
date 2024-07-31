@@ -6,9 +6,8 @@ import Option from "./filters/Option";
 import Cost from "./filters/Cost";
 import AsideCSS from './Aside.module.css'
 
-export default function Aside({sort, setSort}){
-    const [brand, setBrand] = useState(0);
-    const [range, setRange] = useState([0, 0]);
+export default function Aside({sort, setSort, brand, setBrand, range, setRange, score, setScore}){
+
     return(
         <div>
             <div>
@@ -16,12 +15,9 @@ export default function Aside({sort, setSort}){
             </div>
             <div className={AsideCSS.card_options}>
                 <Card>
-                    <Option label={'Marcas'} value={brand} setValue={setBrand}></Option>
-                    <Cost value={range} setValue={setRange}></Cost>
-                    <Reviews></Reviews>
-                    <Option label={'Memoria'} value={brand} setValue={setBrand}></Option>
-                    <Option label={'Rango'} value={brand} setValue={setBrand}></Option>
-                    <Option label={'Cámara'} value={brand} setValue={setBrand}></Option>
+                    <Option label={'Marcas'} brand={brand} setBrand={setBrand}></Option>
+                    <Cost range={range} setBrand={setRange}></Cost>
+                    <Reviews score={score} setScore={setScore}></Reviews>
                 </Card>
             </div>
         </div>

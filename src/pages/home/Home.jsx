@@ -9,6 +9,8 @@ import {DataContext} from '/src/context/DataContext.jsx'
 import { sorterFunctions } from '../../utilities/sorterFunctions.js';
 import { useSearchParams } from 'react-router-dom';
 import ProductRelated from '../../components/products/ProductRelated.jsx';
+import { getManufacturers } from '../../utilities/getManufacturers.js';
+import getReviewAverage from '../../utilities/getReviewAverage.js';
 
 function Home() {
 
@@ -22,6 +24,12 @@ function Home() {
   const [category, setCategory] = useState(null);
 
   const [sort, setSort] = useState(0);
+
+  const [brand, setBrand] = useState('');
+
+  const [range, setRange] = useState(['', '']);
+
+  const [score, setScore] = useState(0);
 
   useEffect(
     () => {
@@ -37,13 +45,22 @@ function Home() {
     if(sort != 0) {
       filtered.sort(sorterFunctions[sort - 1]);
     }
+    if(brand != ''){
+      filtered = filtered.filter(p => (p['manufacturer'] == brand));
+    }
+    if(range[0] != '' && range[1] != ''){
+      filtered = filtered.filter(p => ((p['price'] >= range[0]) && (p['price'] <= range[1])));
+    }
+    if(score != 0){
+      filtered = filtered.filter(p => (getReviewAverage(p['reviews']) == score));
+    }
     return filtered;
   }
   return (
     <div>
       <div className={HomeCSS.container}>
           <div>
-            <Aside sort={sort} setSort={setSort}></Aside>
+            <Aside sort={sort} setSort={setSort} brand={brand} setBrand={setBrand} range={range} setRange={setRange} score={score} setScore={setScore}></Aside>
           </div>
           <div className={HomeCSS.col2}>
             <div className={HomeCSS.container_categories}>

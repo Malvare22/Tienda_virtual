@@ -16,6 +16,17 @@
     }
 }
 
+.input_range{
+    display: flex;
+    justify-content: space-between;
+    input{
+        width: 90px;
+    }
+    div{
+        margin-left:  5px;
+        margin-right:  5px;
+    }
+}
 
 .sorter_label{
     width: 40%

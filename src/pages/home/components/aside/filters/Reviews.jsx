@@ -2,9 +2,7 @@ import { useState } from "react";
 import FiltersCSS from './Filters.module.css'
 import { StarHandleScore } from "../../../../../components/star_score/StarScore";
 
-export default function Reviews(){
-
-    const [score, setScore] = useState(0);
+export default function Reviews({score, setScore}){
 
     return(
         <>
