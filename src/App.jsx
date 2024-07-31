@@ -25,6 +25,9 @@ function App() {
      () => {
       const get = async () => {
         setData(await getData());
+        if (localStorage.getItem('liked') === null) {
+          localStorage.setItem('liked', JSON.stringify([]));
+        }
       };
       get();
     }, []

@@ -91,7 +91,7 @@ function ImgPanel({product}){
                     (img, index) => <div key={index}><img onMouseEnter={() => setImgIndex(index)} src={img} width={(420/product['img'].length)+'px'}></img></div>
                 )}
             </div>
-            <ImgPrincipal enable={true} type={2} value={40} width={"325px"} height={"500px"} src1={product['img'][imgIndex]}></ImgPrincipal>
+            <ImgPrincipal enable={true} type={2} width={"325px"} height={"500px"} product={product}></ImgPrincipal>
     </div>;
 }
 

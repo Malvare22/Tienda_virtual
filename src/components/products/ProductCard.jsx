@@ -20,7 +20,7 @@ function ProductCard({product}) {
 
     return (
       <div className={ProductCardCSS.container}>
-            <Card hoverable cover={<ImgPrincipal enable={true} value={product['discount']} width={"280px"} height={"320px"} src1={product['img'][0]} src2={product['img'][1]}></ImgPrincipal>}>
+            <Card hoverable cover={<ImgPrincipal product={product} width={"280px"} height={"320px"}></ImgPrincipal>}>
                 <div className={ProductCardCSS.body}>
                     <div className={ProductCardCSS.row1}>
                         <div className={ProductCardCSS.row1_col1}>
