@@ -82,8 +82,6 @@
     height: 500px;
     display: flex;
     justify-content: center;
-    
-    margin: 2%;
 }
 
 .container_preview{
@@ -104,26 +102,39 @@
     margin: 15%;
 }
 
-.tabs{
-    width: 462px;
-    height: 482px;
+.row2_col2{
+    width: 662px;
+    min-height: 526px;
+}
+
+.taxes{
+    display: flex;
+    margin-top: 20px;
 }
 
 .container_row2{
-    margin-left: 78px;
 
     display: flex;
+    justify-content: center;
     > div{
         margin: 2%;
     }
 }
 
+.cell{
+    display: flex;
+    justify-content: center;
+}
+
+.ajust{
+    margin-top: 20px;
+}
+
 .img_grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 600px;
-    box-sizing: border-box;
+    width: 600px;
+    height: 600px;
 }
 
 .details{

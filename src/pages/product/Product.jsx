@@ -13,6 +13,8 @@ import TabsInformation from './components/TabsInformation';
 import Review from './components/Review';
 import ProductRelated from '../../components/products/ProductRelated';
 import { useSearchParams } from 'react-router-dom';
+import Taxes from './components/Taxes';
+import Advice from './components/Advice';
 
 function Product() {
     const [searchParams] = useSearchParams();
@@ -59,13 +61,19 @@ function Product() {
                     {
                         product != null && (
                             product['img'].map(
-                                (image, index) => <Image src={image} key={index} alt={index} height={"382px"} width={"260px"}></Image>
+                                (image, index) => <div className={ProductCSS.cell} key={index}><Image src={image}  alt={index} height={"282px"} width={"200px"}></Image></div>
                             )
                         )
                     }
                 </div>
-                <div className={ProductCSS.tabs}>
+                <div className={ProductCSS.row2_col2}>
+                    <div>
                     <TabsInformation product={product} type={1}></TabsInformation>
+                    </div>
+                    <div className={ProductCSS.taxes}>
+                        <Advice></Advice>
+                        <Taxes product={product}></Taxes>
+                    </div>
                 </div>
             </div>
         </div>

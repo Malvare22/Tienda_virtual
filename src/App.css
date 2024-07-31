@@ -6,7 +6,7 @@
 
 body{
   background-color: #EBEFF4;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -19,6 +19,12 @@ body{
   font-family: 'Open Sans';
   src: url('assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf');
   font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/Open_Sans/static/OpenSans-Italic.ttf');
+  font-style: italic;
 }
 
 @font-face {

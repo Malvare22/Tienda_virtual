@@ -1,0 +1,29 @@
+.container{
+    background-color: #164186;
+    width: 500px;
+}
+
+.tittle{
+    font-size: 30px;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+.label{
+    font-size: 25px;
+    color: #FFD300;
+    font-weight: normal;
+
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: normal;
+    svg{
+        fill: #A2D456;
+        margin-right: 10px;
+    }
+}
