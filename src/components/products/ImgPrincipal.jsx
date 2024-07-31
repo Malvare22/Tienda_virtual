@@ -16,8 +16,8 @@ export default function ImgPrincipal({type = 1, product, width, height}){
         () => {
             let likes = localStorage.getItem('liked');
             likes = likes ? JSON.parse(likes) : [];
-            if(likes.includes(product['id'])) setHearted(true);
-        }
+            if(Array.isArray(likes) && likes.includes(product['id'])) setHearted(true);
+        }, []
     )
 
     const handleButton = () => {
@@ -25,10 +25,11 @@ export default function ImgPrincipal({type = 1, product, width, height}){
         setHearted(currentValue);
         let likes = localStorage.getItem('liked');
         likes = likes ? JSON.parse(likes) : [];
-        if(currentValue == true){
+        if(Array.isArray(likes) && currentValue == true){
             likes.push(product['id']);
         }
         else{
+            if(Array.isArray(likes))
             likes = likes.filter((element) => element != product['id']);
         }
         localStorage.setItem('liked', JSON.stringify(likes));
